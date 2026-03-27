@@ -1,0 +1,11 @@
+template: mckinsey
+summary_variant: default
+
+sections:
+  - summary
+  - experience
+  - education
+  - skills
+  - certifications
+  - languages
+  - hobbies

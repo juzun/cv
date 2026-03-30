@@ -1,56 +1,47 @@
-# CV Pipeline
+# CV
 
-Data-driven resume: YAML content → Python build script → JSON → Typst → PDF.
+YAML content → Python → JSON → Typst → PDF.
 
-## Prerequisites
-
-- **Python 3.13+** with `pyyaml` (`uv sync` to install)
-- **Typst CLI** — [install](https://github.com/typst/typst/releases) or `cargo install typst-cli`
-
-## Usage
+## Setup
 
 ```bash
-# Build with default profile
-make build
-
-# Build with a specific profile
-make build PROFILE=short
-
-# Watch for Typst template changes (live reload)
-make watch
-
-# Clean build artifacts
-make clean
+uv sync                          # install Python deps
+# install Typst: https://github.com/typst/typst/releases
+# install typst-live: https://github.com/ItsEthra/typst-live
 ```
 
-Or call the script directly:
+## Commands
 
 ```bash
-python scripts/build.py --profile default --output build/resume.pdf
+make build                       # compile PDF → data/output.pdf
+make build PROFILE=ml_short      # use a specific profile
+make serve                       # live preview in browser (typst-live)
+make serve PROFILE=ml_short
+make clean
 ```
 
 ## Structure
 
 ```
-data/resume.yaml            ← all CV content (source of truth)
-data/profiles/default.yaml  ← template + variant + section order
-templates/mckinsey/          ← Typst template (main.typ + components.typ)
-scripts/build.py             ← build orchestration
-build/                       ← generated JSON + PDF (gitignored)
+data/resume.yaml               ← all content (edit this)
+data/profiles/default.yaml     ← which sections, summary variant, template
+templates/default/             ← Typst template (main.typ + components.typ)
+cv/                            ← Python build package
 ```
 
-## Switching Variants
+## Profiles
 
-Edit `data/profiles/default.yaml`:
+A profile (`data/profiles/<name>.yaml`) controls:
+- `template` — which folder under `templates/` to use
+- `summary_variant` — which summary from `resume.yaml`'s `summaries:` map
+- `sections` — ordered list of sections to include
 
-- **`summary_variant`**: picks from `summaries` in `resume.yaml` (`default`, `short`, `ml_focused`)
-- **`sections`**: ordered list of sections to include — reorder or remove entries
-- **`template`**: switch rendering template (e.g., `mckinsey`)
+```bash
+cp data/profiles/default.yaml data/profiles/myprofile.yaml
+make build PROFILE=myprofile
+```
 
-To create a new profile, copy `data/profiles/default.yaml` to a new file and adjust.
+## Adding a template
 
-## Adding a Template
-
-1. Create `templates/<name>/main.typ` and `components.typ`
-2. Set `template: <name>` in a profile
-3. `make build PROFILE=<your-profile>`
+Create `templates/<name>/main.typ` + `components.typ`, set `template: <name>` in a profile.
+The build writes `templates/<name>/content.json` — read it as `json("content.json")` in `main.typ`.

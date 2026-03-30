@@ -1,11 +1,8 @@
 template: default
-summary_variant: default
+summary_variant: ml_focused
 
 sections:
   - summary
   - experience
   - education
   - skills
-  - certifications
-  - languages
-  - hobbies

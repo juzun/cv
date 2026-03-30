@@ -28,7 +28,8 @@ summaries:
 experience:
   - company: E.ON
     roles:
-      - period: 2025/06 – present
+      - start: "2025/06"
+        end: present
         title: Machine Learning Engineer
         department: Energy Markets Data Analytics, Essent N.V.
         bullets:
@@ -36,13 +37,14 @@ experience:
             Co-developed a short-term allocation forecast ML model reducing
             balancing market costs and saving trading desk time. Contributed to
             model design and feature engineering, and led end-to-end engineering
-            – data pipelines, model training workflow, and jobs deployment.
+            - data pipelines, model training workflow, and jobs deployment.
           - >-
             Supported balancing market cost calculation to assess BMR premia,
             developed a benchmark model, implemented module for future cost
             computation and enhanced an existing production ML model for BMR
             forecasting.
-      - period: 2024/05 – 2025/05
+      - start: "2024/05"
+        end: "2025/05"
         title: Data Scientist
         department: Modelling and Quantitative Analysis, E.ON Energy Markets
         bullets:
@@ -57,7 +59,8 @@ experience:
             an optimization engine for proxy hedge combinations and contributed
             to alignment on hedges and decomposition strategies across the
             company's regions. Orchestrated all jobs and services in Kubernetes.
-      - period: 2023/09 – 2024/04
+      - start: "2023/09"
+        end: "2024/04"
         title: Trainee
         department: Portfolio Management, E.ON CZ
         bullets:
@@ -76,7 +79,8 @@ experience:
   - company: DataSentics
     location: Brno, CZ
     roles:
-      - period: 2023/02 – 2023/08
+      - start: "2023/02"
+        end: "2023/08"
         title: Data Scientist
         department: ""
         bullets:
@@ -90,12 +94,13 @@ education:
   - degree: Mathematical Engineering (BSc & MSc)
     institution: Brno University of Technology
     location: Czechia
-    period: 2017 – 2023
+    start: "2017"
+    end: "2023"
     details: "Master's thesis: Neural networks and geometric algebras"
   - degree: Logistics Analytics and Optimization
     institution: Molde University College
     location: Norway
-    period: "2022"
+    start: "2022"
     details: Study internship
 
 certifications:

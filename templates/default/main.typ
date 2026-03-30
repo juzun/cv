@@ -1,15 +1,10 @@
-// McKinsey-style CV — main entry point
-// Reads build/resume.json and renders all sections.
-
 #import "components.typ": *
 
-#let data = json("/build/resume.json")
+#let data = json("content.json")
 #let meta = data.meta
 #let sections = data.sections
 
-// ============================================================================
-// PAGE SETUP — tweak margins and base typography here
-// ============================================================================
+// Page setup
 #set page(
   paper: "a4",
   margin: (top: 1.8cm, bottom: 1.8cm, left: 2cm, right: 2cm),
@@ -25,12 +20,9 @@
 
 #set par(justify: true, leading: 0.72em, spacing: 0.9em)
 
-// Disable blue underlines on links — keep text colour only
 #show link: it => text(fill: rgb("#1a1a1a"), it)
 
-// ============================================================================
-// HEADER
-// ============================================================================
+// Header
 #align(center)[
   #text(upper(meta.name), weight: "bold", size: 20pt, tracking: 4pt)
   #v(5pt)
@@ -42,9 +34,7 @@
 #v(8pt)
 #line(length: 100%, stroke: 1.2pt + rgb("#2a2a2a"))
 
-// ============================================================================
-// SECTIONS — dispatched by type from the resolved JSON
-// ============================================================================
+// Sections
 #for section in sections {
   if section.type == "summary" {
     section-header("Professional Summary")

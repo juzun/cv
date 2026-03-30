@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "name": "Jakub Zapletal",
+    "title": "Data Scientist | Quantitative Analyst | Python Developer",
+    "contact": {
+      "email": "zapletalja@gmail.com",
+      "phone": "+420 607 064 184",
+      "location": "Eindhoven, NL",
+      "github": "https://github.com/juzun",
+      "linkedin": "https://www.linkedin.com/in/jakub-zapletal/"
+    }
+  },
+  "sections": [
+    {
+      "type": "summary",
+      "content": "Data Scientist with an applied mathematics background, specializing in energy markets analytics. Experienced in optimization, time-series analysis, and machine learning, with end-to-end ownership of data pipelines, model development, and cloud-based deployment of analytical applications used in trading, portfolio management and risk assessment."
+    },
+    {
+      "type": "experience",
+      "content": [
+        {
+          "company": "E.ON",
+          "roles": [
+            {
+              "start": "2025/06",
+              "end": "present",
+              "title": "Machine Learning Engineer",
+              "department": "Energy Markets Data Analytics, Essent N.V.",
+              "bullets": [
+                "Co-developed a short-term allocation forecast ML model reducing balancing market costs and saving trading desk time. Contributed to model design and feature engineering, and led end-to-end engineering - data pipelines, model training workflow, and jobs deployment.",
+                "Supported balancing market cost calculation to assess BMR premia, developed a benchmark model, implemented module for future cost computation and enhanced an existing production ML model for BMR forecasting."
+              ]
+            },
+            {
+              "start": "2024/05",
+              "end": "2025/05",
+              "title": "Data Scientist",
+              "department": "Modelling and Quantitative Analysis, E.ON Energy Markets",
+              "bullets": [
+                "Developed a linear programming-based battery optimization module to assess the commercial feasibility of battery usage on day-ahead markets and analyzed Czech spot power market to evaluate potential spot market opportunities.",
+                "Automated Trayport energy markets data processing, delivering standard tradable products analyses via web app and Snowflake. Built an optimization engine for proxy hedge combinations and contributed to alignment on hedges and decomposition strategies across the company's regions. Orchestrated all jobs and services in Kubernetes."
+              ]
+            },
+            {
+              "start": "2023/09",
+              "end": "2024/04",
+              "title": "Trainee",
+              "department": "Portfolio Management, E.ON CZ",
+              "bullets": [
+                "Developed an intrinsic MILP model maximizing gas storage profit based on deterministic price forward curve. Delivered as a web app with an LP core, Snowflake data integration and adopted by gas portfolio management for daily operations.",
+                "Enhanced a weather normal year calculation tool (calibrations, testing, users support, web app and API) incorporating linear regression and Fourier series. Used the tool to support regional weather risk management and to evaluate several regional weather hedge contracts."
+              ]
+            }
+          ]
+        },
+        {
+          "company": "DataSentics",
+          "location": "Brno, CZ",
+          "roles": [
+            {
+              "start": "2023/02",
+              "end": "2023/08",
+              "title": "Data Scientist",
+              "department": "",
+              "bullets": [
+                "Contributed to chronic kidney disease prediction modelling (gradient-boosted decision trees), including medical data collection, feature engineering, and model evaluation, while gaining hands-on experience with DataLake, Databricks, PySpark, and Git."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "education",
+      "content": [
+        {
+          "degree": "Mathematical Engineering (BSc & MSc)",
+          "institution": "Brno University of Technology",
+          "location": "Czechia",
+          "start": "2017",
+          "end": "2023",
+          "details": "Master's thesis: Neural networks and geometric algebras"
+        },
+        {
+          "degree": "Logistics Analytics and Optimization",
+          "institution": "Molde University College",
+          "location": "Norway",
+          "start": "2022",
+          "details": "Study internship"
+        }
+      ]
+    },
+    {
+      "type": "skills",
+      "content": [
+        {
+          "category": "Python",
+          "items": [
+            {
+              "group": "Core libraries",
+              "entries": [
+                "Pandas",
+                "Pydantic",
+                "Streamlit",
+                "Plotly",
+                "Dash",
+                "FastAPI",
+                "Jupyter",
+                "Numba"
+              ]
+            },
+            {
+              "group": "Dev tools",
+              "entries": [
+                "ruff",
+                "pytest",
+                "mypy",
+                "uv",
+                "flake8"
+              ]
+            },
+            {
+              "group": "ML libraries",
+              "entries": [
+                "Keras",
+                "TensorFlow",
+                "LightGBM",
+                "scikit-learn"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Mathematical Programming (LP, MILP, nonlinear, stochastic)",
+          "items": [
+            {
+              "group": "Tools",
+              "entries": [
+                "Pyomo",
+                "PuLP",
+                "AMPL",
+                "GAMS",
+                "Open-source solvers (SCIP, HiGHS, CBC)"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Software Engineering & Deployment",
+          "items": [
+            {
+              "group": "Tools",
+              "entries": [
+                "Docker",
+                "Azure DevOps",
+                "Azure Container Apps",
+                "Git",
+                "Kubernetes (basic)",
+                "Jira"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Data Analysis",
+          "items": [
+            {
+              "group": "Platforms",
+              "entries": [
+                "Snowflake & Snowpark",
+                "Databricks & PySpark",
+                "Excel"
+              ]
+            },
+            {
+              "group": "Statistical analysis",
+              "entries": [
+                "ARIMA",
+                "Regression methods",
+                "Hypothesis testing"
+              ]
+            }
+          ]
+        },
+        {
+          "category": "Additional Programming",
+          "items": [
+            {
+              "group": "Languages",
+              "entries": [
+                "C# (bachelor's thesis)",
+                "C++",
+                "MATLAB (image processing, numerical methods)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "certifications",
+      "content": [
+        "Udacity nanodegree: Data Scientist",
+        "Udacity nanodegree: AI Trading Strategies",
+        "IBM: Applied Data Science with Python",
+        "IBM: Mathematical Optimization for Business Problems"
+      ]
+    },
+    {
+      "type": "languages",
+      "content": [
+        {
+          "name": "Czech",
+          "level": 10
+        },
+        {
+          "name": "English",
+          "level": 9
+        },
+        {
+          "name": "German",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "type": "hobbies",
+      "content": "Playing trombone in jazz sessions, orchestras, and bands. Playing guitar and bass. Mountain hiking, basketball, cycling, random wandering. Analog and digital photography."
+    }
+  ]
+}

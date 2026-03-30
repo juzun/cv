@@ -1,27 +1,18 @@
-.PHONY: build watch serve clean
+.PHONY: build serve clean
 
-PROFILE ?= default
-PORT    ?= 8787
+PROFILE  ?= default
+TEMPLATE ?= default
 
-# One-shot build → PDF
+# generate JSON resume from YAML resume and compile PDF from typst main
 build:
-	uv run python scripts/build.py --profile $(PROFILE)
+	uv run cv-build --profile $(PROFILE)
+	typst compile templates/$(TEMPLATE)/main.typ data/output.pdf
 
-# Live-reload: regenerate JSON, then watch Typst → SVG + serve in browser
+# generate JSON resume from YAML resume and launch live preview in browser
 serve:
-	@mkdir -p build/preview
-	uv run python scripts/build.py --profile $(PROFILE)
-	typst watch --root . \
-		templates/$$(uv run python -c "import yaml; print(yaml.safe_load(open('data/profiles/$(PROFILE).yaml'))['template'])")/main.typ \
-		build/preview/resume-{p}.svg &
-	uv run python scripts/serve.py --port $(PORT)
-
-# Watch Typst → PDF only (no browser)
-watch:
-	uv run python scripts/build.py --profile $(PROFILE)
-	typst watch --root . \
-		templates/$$(uv run python -c "import yaml; print(yaml.safe_load(open('data/profiles/$(PROFILE).yaml'))['template'])")/main.typ \
-		build/resume.pdf
+	uv run cv-build --profile $(PROFILE)
+	typst-live templates/$(TEMPLATE)/main.typ
 
 clean:
-	rm -rf build/
+	rm -rf data/output.pdf templates/$(TEMPLATE)/content.json
+

@@ -1,0 +1,80 @@
+meta:
+  name: Your Name
+  title: Job Title | Another Title
+  contact:
+    email: your@email.com
+    phone: "+1 234 567 890"
+    location: City, Country
+    github: https://github.com/yourhandle
+    linkedin: https://www.linkedin.com/in/yourhandle/
+
+summaries:
+  default: >-
+    One-paragraph summary of your background and expertise.
+  short: >-
+    Shorter one-sentence summary.
+  ml_focused: >-
+    Alternative summary with a different focus.
+
+experience:
+  - company: Company Name
+    roles:
+      - start: "YYYY/MM"
+        end: present
+        title: Job Title
+        department: Department, Company Entity
+        bullets:
+          - What you did and what impact it had.
+          - Another achievement.
+      - start: "YYYY/MM"
+        end: "YYYY/MM"
+        title: Previous Role
+        department: Department
+        bullets:
+          - What you did.
+
+  - company: Another Company
+    location: City, Country
+    roles:
+      - start: "YYYY/MM"
+        end: "YYYY/MM"
+        title: Job Title
+        department: ""
+        bullets:
+          - What you did.
+
+education:
+  - degree: Degree Name (BSc / MSc)
+    institution: University Name
+    location: Country
+    start: "YYYY"
+    end: "YYYY"
+    details: "Thesis: Title"
+  - degree: Exchange / Minor Program
+    institution: University Name
+    location: Country
+    start: "YYYY"
+    details: Exchange semester
+
+certifications:
+  - "Provider: Certification Name"
+
+languages:
+  - name: Language
+    level: 10        # 1–10
+  - name: Language
+    level: 7
+
+skills:
+  - category: Category Name
+    items:
+      - group: Group Name
+        entries:
+          - Tool A
+          - Tool B
+      - group: Another Group
+        entries:
+          - Tool C
+
+hobbies: >-
+  Short description of hobbies and interests.

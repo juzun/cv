@@ -11,3 +11,4 @@ wheels/
 
 /templates/*/*.json
 /data/output.pdf
+/data/content.yaml
